@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kiki.mapper.StudentMapper">
+
+    <select id="queryStudentList" resultType="com.kiki.pojo.Student">
+       select * from mybatis.student;
+    </select>
+
+    <select id="queryStudentById" resultType="com.kiki.pojo.Student">
+       select * from mybatis.student where id = #{id};
+    </select>
+
+    <insert id="addStudent" parameterType="com.kiki.pojo.Student">
+        insert into mybatis.student (id,name) values (#{id},#{name})
+    </insert>
+
+    <update id="updateStudent" parameterType="com.kiki.pojo.Student">
+        update mybatis.student set name=#{name} where id =#{id}
+    </update>
+
+    <delete id="deleteStudent" parameterType="int">
+        delete from mybatis.student where id=#{id}
+    </delete>
+</mapper>

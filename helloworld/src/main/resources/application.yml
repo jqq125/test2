@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/mybatis?useUnicode=true&characterEncoding=utf-8&useSSL=false
+
+
+#spring:
+#  datasource:
+#    username: root
+#    password:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://1ocalhost:3306/mybatis?useUnicode=true&characterEncoding=utf-8
+
+#mybatis:
+#  type-aliases-package: com.kiki.pojo
+#  #接口的配置文件的位置 我这里接口配置文件是UserMapper.xml 如下图所示
+#  mapper-locations: classpath:mapper/*.xml
